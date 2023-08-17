@@ -1,0 +1,7 @@
+{
+  "name": "Charted",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
