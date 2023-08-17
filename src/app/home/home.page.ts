@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  classToggle: boolean = false;
   constructor() {}
 
+  changeView(event: any) {
+    this.classToggle = event.detail.checked;
+  }
 }

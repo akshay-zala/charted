@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Charted
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-toggle (ionChange)="changeView($event)"></ion-toggle>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [ngClass]="classToggle ? 'background-1' : 'background-2'" [fullscreen]="true">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="ion-padding">
+      <ion-text [ngClass]="classToggle ? 'txt-1' : 'text-1'">
+        {{ classToggle ? 'Welcome to Charted!' : 'Welcome to Redbus' }}
+      </ion-text>
+    </div>
+    <div class="ion-padding">
+      <ion-text [ngClass]="classToggle ? 'txt-2' : 'text-2'">
+        {{ classToggle ? 'Welcome to Charted!' : 'Welcome to Redbus' }}
+      </ion-text>
+    </div>
   </div>
 </ion-content>
