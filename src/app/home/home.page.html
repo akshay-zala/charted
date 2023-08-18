@@ -9,9 +9,13 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+</ion-content>
 <ion-content [ngClass]="classToggle ? 'background-1' : 'background-2'" [fullscreen]="true">
   <div id="container">
-    <div class="ion-padding">
+    <!-- <home-page-theme-1 *ngIf="!classToggle"></home-page-theme-1>
+    <home-page-theme-2 *ngIf="classToggle"></home-page-theme-2> -->
+    <!-- <div class="ion-padding">
       <ion-text [ngClass]="classToggle ? 'txt-1' : 'text-1'">
         {{ classToggle ? 'Welcome to Charted!' : 'Welcome to Redbus' }}
       </ion-text>
@@ -20,6 +24,6 @@
       <ion-text [ngClass]="classToggle ? 'txt-2' : 'text-2'">
         {{ classToggle ? 'Welcome to Charted!' : 'Welcome to Redbus' }}
       </ion-text>
-    </div>
+    </div> -->
   </div>
 </ion-content>

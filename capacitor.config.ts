@@ -1,8 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
+import { environment } from "./src/environments/environment"
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Charted',
+  appId: environment.client.appId,
+  appName: environment.client.appName,
   webDir: 'www',
   server: {
     androidScheme: 'https'
