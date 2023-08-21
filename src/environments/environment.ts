@@ -1,20 +1,19 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+
 export const environment = {
   production: false,
-  // client: client2
-  client2: {
-    templateUrl: "home-page-theme-2.html",
+  client: {
+    templateUrl: "home.page.html",
     appId: "io.ionic.bitla",
-    appName: 'Bitla',
+    appName: 'Bitla'
   },
-  client1: {
-    templateUrl: "home-page-theme-1.html",
-    appId: "io.ionic.charted",
-    appName: 'Charted',
-  }
 };
+
+export function getURL(): string {
+  return environment.client.templateUrl;
+}
 
 
 

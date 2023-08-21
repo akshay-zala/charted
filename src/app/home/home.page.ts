@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { environment } from "../../environments/environment"
 import { UtilityService } from "../services/utility.service"
+import { getURL } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
-  templateUrl: environment.client1.templateUrl,
+  templateUrl: getURL(),
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
@@ -13,11 +14,7 @@ export class HomePage {
   constructor(
     private _utilityService: UtilityService
   ) {
-    // this._utilityService.getClient().subscribe((res: any) => {
-    //   console.log("_utilityService res : ", res);
-    // }, (error: any) => {
-    //   console.log("_utilityService error : ", error);
-    // })
+    console.log("HomePage constructor called");
   }
 
   ionViewDidEnter() { }

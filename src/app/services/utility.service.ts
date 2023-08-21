@@ -6,6 +6,8 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class UtilityService {
+  private appConfig: any;
+
   BASE_URL_1 = "https://www.morningstartravels.in/api/angular_meta_app.json?&device_id=";
   BASE_URL_2 = "https://www.charteredbus.in/api/angular_meta_app.json?&device_id=";
 
@@ -20,6 +22,7 @@ export class UtilityService {
   }
 
   setClient(value: any) {
+    // this.appConfig = value;
     this.subject$.next(value);
   }
 
